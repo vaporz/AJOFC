@@ -1,4 +1,4 @@
-aaa<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jofc</groupId>
@@ -28,10 +28,6 @@ aaa<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.o
 		<resources>
 			<resource>
 				<directory>${project.build.sourceDirectory}</directory>
-				<excludes>
-					<exclude>.svn</exclude>
-					<exclude>log4j.*</exclude>
-				</excludes>
 			</resource>
 		</resources>
 		<testResources>
@@ -42,9 +38,6 @@ aaa<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.o
 			</testResource>
 			<testResource>
 				<directory>src/test/java</directory>
-				<excludes>
-					<exclude>.svn</exclude>
-				</excludes>
 			</testResource>
 		</testResources>
 		<plugins>
@@ -74,19 +67,4 @@ aaa<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.o
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-        <repository>
-            <id>archiva.internal</id>
-            <name>Internal Release Repository</name>
-            <url>http://maven.n.miliao.com:8081/nexus/content/repositories/releases/
-            </url>
-        </repository>
-        <snapshotRepository>
-            <id>archiva.snapshots</id>
-            <name>Internal Snapshot Repository</name>
-            <url>
-                http://maven.n.miliao.com:8081/nexus/content/repositories/snapshots/
-            </url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
